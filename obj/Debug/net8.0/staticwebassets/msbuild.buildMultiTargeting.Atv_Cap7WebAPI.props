@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Atv_Cap7WebAPI.props" />
+</Project>

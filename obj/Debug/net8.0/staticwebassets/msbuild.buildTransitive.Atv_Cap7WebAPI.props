@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/Atv_Cap7WebAPI.props" />
+</Project>
