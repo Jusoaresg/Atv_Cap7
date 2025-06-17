@@ -7,7 +7,7 @@ public class Avaliacao
     public int Id { get; set; }
     public int CandidatoId { get; set; }
     [JsonIgnore]
-    public Candidato Candidato { get; set; }
+    public Candidato? Candidato { get; set; }
 
     public int NotaTecnica { get; set; }  // 0 a 10
     public int NotaComportamental { get; set; }  // 0 a 10

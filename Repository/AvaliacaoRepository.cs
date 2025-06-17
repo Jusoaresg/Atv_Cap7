@@ -3,6 +3,7 @@ using Atv_Cap7WebAPI.Data.Context;
 using Atv_Cap7WebAPI.Models;
 using Atv_Cap7WebAPI.Repository.Repositories;
 using Atv_Cap7WebAPI.Models.DTOs;
+using Atv_Cap7WebAPI.Helpers;
 
 namespace Atv_Cap7WebAPI.Repository
 {
@@ -50,6 +51,14 @@ namespace Atv_Cap7WebAPI.Repository
                 _context.Avaliacoes.Remove(avaliacao);
                 await _context.SaveChangesAsync();
             }
+        }
+
+        public async Task<IEnumerable<Empresa>> GetEmpresasAsync(PaginationParameters pagination)
+        {
+            return await _context.Empresas
+                .Skip((pagination.PageNumber - 1) * pagination.PageSize)
+                .Take(pagination.PageSize)
+                .ToListAsync();
         }
     }
 }

@@ -13,7 +13,9 @@ public class Inscricao
     public Candidato? Candidato { get; set; }
 
     // Relacionamento com Vaga
+
     public int VagaId { get; set; }
+    [JsonIgnore]
     public Vaga? Vaga { get; set; }
 
     // Opcional: status ou pontuação

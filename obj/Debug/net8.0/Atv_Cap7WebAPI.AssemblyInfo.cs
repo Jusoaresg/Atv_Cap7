@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Atv_Cap7WebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d28af52f9597af109b4bd9473183ac102a74567a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0b1818b98f77c8911c0ccfb3b20925fb1e2f2b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Atv_Cap7WebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Atv_Cap7WebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

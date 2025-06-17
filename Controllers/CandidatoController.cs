@@ -1,12 +1,13 @@
 namespace Atv_Cap7WebAPI.Controllers;
 
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
+using Atv_Cap7WebAPI.Helpers;
 using Atv_Cap7WebAPI.Models;
 using Atv_Cap7WebAPI.Repository;
 using Atv_Cap7WebAPI.Repository.Repositories;
 using Atv_Cap7WebAPI.Models.DTOs;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -17,6 +18,13 @@ public class CandidatoController : ControllerBase
     public CandidatoController(ICandidatoRepository candidatoRepository)
     {
         _candidatoRepository = candidatoRepository;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetCandidatos([FromQuery] PaginationParameters paginationParams)
+    {
+        var candidatos = await _candidatoRepository.GetCandidatosAsync(paginationParams);
+        return Ok(candidatos);
     }
 
     [HttpGet("{id}")]
