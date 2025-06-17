@@ -1,0 +1,6 @@
+/home/juliano/Projects/outro/Atv_Cap7/tests/obj/Debug/net8.0/tests.csproj.AssemblyReference.cache
+/home/juliano/Projects/outro/Atv_Cap7/tests/obj/Debug/net8.0/tests.GeneratedMSBuildEditorConfig.editorconfig
+/home/juliano/Projects/outro/Atv_Cap7/tests/obj/Debug/net8.0/tests.AssemblyInfoInputs.cache
+/home/juliano/Projects/outro/Atv_Cap7/tests/obj/Debug/net8.0/tests.AssemblyInfo.cs
+/home/juliano/Projects/outro/Atv_Cap7/tests/obj/Debug/net8.0/tests.csproj.CoreCompileInputs.cache
+/home/juliano/Projects/outro/Atv_Cap7/tests/obj/Debug/net8.0/tests.sourcelink.json

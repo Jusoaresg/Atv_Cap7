@@ -338,3 +338,9 @@ C:/Users/T-Gamer/Source/Repos/Atv_Cap7_2/obj/Debug/net8.0/refint/Atv_Cap7WebAPI.
 C:/Users/T-Gamer/Source/Repos/Atv_Cap7_2/obj/Debug/net8.0/Atv_Cap7WebAPI.pdb
 C:/Users/T-Gamer/Source/Repos/Atv_Cap7_2/obj/Debug/net8.0/Atv_Cap7WebAPI.genruntimeconfig.cache
 C:/Users/T-Gamer/Source/Repos/Atv_Cap7_2/obj/Debug/net8.0/ref/Atv_Cap7WebAPI.dll
+/home/juliano/Projects/outro/Atv_Cap7/bin/Debug/net8.0/xunit.abstractions.dll
+/home/juliano/Projects/outro/Atv_Cap7/bin/Debug/net8.0/xunit.assert.dll
+/home/juliano/Projects/outro/Atv_Cap7/bin/Debug/net8.0/xunit.core.dll
+/home/juliano/Projects/outro/Atv_Cap7/bin/Debug/net8.0/xunit.execution.dotnet.dll
+/home/juliano/Projects/outro/Atv_Cap7/bin/Debug/net8.0/tests/obj/project.assets.json
+/home/juliano/Projects/outro/Atv_Cap7/bin/Debug/net8.0/tests/obj/tests.csproj.nuget.dgspec.json
