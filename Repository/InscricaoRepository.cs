@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RecrutamentoDiversidade.Data;
-using RecrutamentoDiversidade.Models;
-using RecrutamentoDiversidade.Repositories.Interfaces;
+using Atv_Cap7WebAPI.Data.Context;
+using Atv_Cap7WebAPI.Models;
+using Atv_Cap7WebAPI.Repository.Repositories;
 
-namespace RecrutamentoDiversidade.Repositories
+namespace Atv_Cap7WebAPI.Repository
 {
     public class InscricaoRepository : IInscricaoRepository
     {

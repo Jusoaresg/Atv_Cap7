@@ -1,6 +1,6 @@
-﻿using RecrutamentoDiversidade.Models;
+﻿using Atv_Cap7WebAPI.Models;
 
-namespace RecrutamentoDiversidade.Repositories.Interfaces
+namespace Atv_Cap7WebAPI.Repository.Repositories
 {
     public interface IVagaRepository
     {

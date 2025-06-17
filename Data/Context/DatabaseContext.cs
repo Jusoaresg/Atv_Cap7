@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RecrutamentoDiversidade.Models;
+using Atv_Cap7WebAPI.Models;
 
-namespace RecrutamentoDiversidade.Data
+namespace Atv_Cap7WebAPI.Data.Context
 {
     public class AppDbContext : DbContext
     {
@@ -40,11 +40,14 @@ namespace RecrutamentoDiversidade.Data
                 .OnDelete(DeleteBehavior.Cascade);
 
             // === Vaga -> Inscricao (1:N)
-            modelBuilder.Entity<Vaga>()
-                .HasMany(v => v.Inscricoes)
+            modelBuilder.Entity<Vaga>(entity =>
+            {
+                entity.Property(v => v.Aberta).HasConversion<int>().IsRequired();
+                entity.HasMany(v => v.Inscricoes)
                 .WithOne(i => i.Vaga)
                 .HasForeignKey(i => i.VagaId)
                 .OnDelete(DeleteBehavior.Cascade);
+            });
 
             // === Empresa <-> ProgramaDiversidade (N:M)
             modelBuilder.Entity<Empresa>()
