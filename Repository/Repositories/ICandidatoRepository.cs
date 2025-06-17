@@ -1,4 +1,5 @@
 ﻿using Atv_Cap7WebAPI.Models;
+using Atv_Cap7WebAPI.Helpers;
 
 namespace Atv_Cap7WebAPI.Repository.Repositories
 {
@@ -9,5 +10,6 @@ namespace Atv_Cap7WebAPI.Repository.Repositories
         Task AdicionarAsync(Candidato candidato);
         Task AtualizarAsync(Candidato candidato);
         Task RemoverAsync(int id);
+        Task<IEnumerable<Candidato>> GetCandidatosAsync(PaginationParameters pagination);
     }
 }

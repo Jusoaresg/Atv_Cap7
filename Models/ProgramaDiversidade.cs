@@ -1,4 +1,6 @@
-﻿namespace Atv_Cap7WebAPI.Models;
+﻿using System.Text.Json.Serialization;
+
+namespace Atv_Cap7WebAPI.Models;
 
 public class ProgramaDiversidade
 {
@@ -10,5 +12,6 @@ public class ProgramaDiversidade
     public ICollection<Empresa>? Empresas { get; set; } = new List<Empresa>();
 
     // N:M com Vaga
+    [JsonIgnore]
     public ICollection<Vaga>? Vagas { get; set; } = new List<Vaga>();
 }

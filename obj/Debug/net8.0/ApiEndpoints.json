@@ -1,0 +1,96 @@
+[
+  {
+    "ContainingType": "Atv_Cap7WebAPI.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "Atv_Cap7WebAPI.Models.UserLogin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Atv_Cap7WebAPI.Controllers.CandidatoController",
+    "Method": "Create",
+    "RelativePath": "api/Candidato",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "candidato",
+        "Type": "Atv_Cap7WebAPI.Models.Candidato",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Atv_Cap7WebAPI.Controllers.CandidatoController",
+    "Method": "List",
+    "RelativePath": "api/Candidato",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Atv_Cap7WebAPI.Controllers.CandidatoController",
+    "Method": "Get",
+    "RelativePath": "api/Candidato/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Atv_Cap7WebAPI.Controllers.VagaController",
+    "Method": "Create",
+    "RelativePath": "api/Vaga",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Atv_Cap7WebAPI.Controllers.VagaController",
+    "Method": "List",
+    "RelativePath": "api/Vaga",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Atv_Cap7WebAPI.Controllers.VagaController",
+    "Method": "Get",
+    "RelativePath": "api/Vaga/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

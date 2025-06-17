@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Atv_Cap7WebAPI.Data.Context;
 using Atv_Cap7WebAPI.Models;
+using Atv_Cap7WebAPI.Helpers;
 using Atv_Cap7WebAPI.Repository.Repositories;
 
 namespace Atv_Cap7WebAPI.Repository
@@ -50,6 +51,14 @@ namespace Atv_Cap7WebAPI.Repository
                 _context.Candidatos.Remove(candidato);
                 await _context.SaveChangesAsync();
             }
+        }
+
+        public async Task<IEnumerable<Candidato>> GetCandidatosAsync(PaginationParameters pagination)
+        {
+            return await _context.Candidatos
+                .Skip((pagination.PageNumber - 1) * pagination.PageSize)
+                .Take(pagination.PageSize)
+                .ToListAsync();
         }
     }
 }

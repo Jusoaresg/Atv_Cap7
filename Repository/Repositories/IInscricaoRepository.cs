@@ -1,4 +1,5 @@
-﻿using Atv_Cap7WebAPI.Models;
+﻿using Atv_Cap7WebAPI.Helpers;
+using Atv_Cap7WebAPI.Models;
 
 namespace Atv_Cap7WebAPI.Repository.Repositories
 {
@@ -8,5 +9,7 @@ namespace Atv_Cap7WebAPI.Repository.Repositories
         Task<Inscricao?> BuscarPorIdAsync(int id);
         Task AdicionarAsync(Inscricao inscricao);
         Task RemoverAsync(int id);
+        Task<IEnumerable<Inscricao>> GetInscricoesAsync(PaginationParameters pagination);
+
     }
 }

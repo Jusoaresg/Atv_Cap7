@@ -1,4 +1,5 @@
-﻿using Atv_Cap7WebAPI.Models;
+﻿using Atv_Cap7WebAPI.Helpers;
+using Atv_Cap7WebAPI.Models;
 
 namespace Atv_Cap7WebAPI.Repository.Repositories
 {
@@ -10,5 +11,6 @@ namespace Atv_Cap7WebAPI.Repository.Repositories
         Task AtualizarAsync(Vaga vaga);
         Task RemoverAsync(int id);
         Task<int> ContarTotalAsync();
+        Task<IEnumerable<Vaga>> GetVagasAsync(PaginationParameters pagination);
     }
 }
