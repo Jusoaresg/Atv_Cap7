@@ -1,4 +1,5 @@
 ﻿using Atv_Cap7WebAPI.Models;
+using Atv_Cap7WebAPI.Models.DTOs;
 
 namespace Atv_Cap7WebAPI.Repository.Repositories
 {
@@ -6,7 +7,7 @@ namespace Atv_Cap7WebAPI.Repository.Repositories
     {
         Task<IEnumerable<Candidato>> ListarTodosAsync();
         Task<Candidato?> BuscarPorIdAsync(int id);
-        Task AdicionarAsync(Candidato candidato);
+        Task AdicionarAsync(CandidatoCreateDTO candidato);
         Task AtualizarAsync(Candidato candidato);
         Task RemoverAsync(int id);
     }

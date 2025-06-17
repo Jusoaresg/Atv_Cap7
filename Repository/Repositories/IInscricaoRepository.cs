@@ -6,7 +6,7 @@ namespace Atv_Cap7WebAPI.Repository.Repositories
     {
         Task<IEnumerable<Inscricao>> ListarTodasAsync();
         Task<Inscricao?> BuscarPorIdAsync(int id);
-        Task AdicionarAsync(Inscricao inscricao);
+        Task AdicionarAsync(InscricaoCreateDTO inscricao);
         Task RemoverAsync(int id);
     }
 }

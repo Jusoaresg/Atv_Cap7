@@ -5,12 +5,14 @@ using Microsoft.AspNetCore.Mvc;
 using Atv_Cap7WebAPI.Models;
 using Atv_Cap7WebAPI.Repository;
 using Atv_Cap7WebAPI.Repository.Repositories;
+using Atv_Cap7WebAPI.Models.DTOs;
+using Microsoft.AspNetCore.Authorization;
 
 [ApiController]
 [Route("api/[controller]")]
 public class CandidatoController : ControllerBase
 {
-    private ICandidatoRepository _candidatoRepository;
+    private readonly ICandidatoRepository _candidatoRepository;
 
     public CandidatoController(ICandidatoRepository candidatoRepository)
     {
@@ -18,10 +20,10 @@ public class CandidatoController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> Get([FromRoute] int id)
+    public async Task<IActionResult> Get(int id)
     {
         var candidato = await _candidatoRepository.BuscarPorIdAsync(id);
-        if (candidato != null)
+        if (candidato == null)
         {
             return BadRequest();
         }
@@ -29,7 +31,8 @@ public class CandidatoController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] Candidato candidato)
+    [Authorize]
+    public async Task<IActionResult> Create([FromBody] CandidatoCreateDTO candidato)
     {
         if (!ModelState.IsValid)
         {
@@ -45,4 +48,19 @@ public class CandidatoController : ControllerBase
         var candidatos = await _candidatoRepository.ListarTodosAsync();
         return Ok(candidatos);
     }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _candidatoRepository.RemoverAsync(id);
+        return Ok(id);
+    }
+
+    [HttpPut]
+    public async Task<IActionResult> Update([FromBody] Candidato candidato)
+    {
+        await _candidatoRepository.AtualizarAsync(candidato);
+        return Ok(candidato);
+    }
+
 }

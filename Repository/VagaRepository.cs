@@ -2,6 +2,7 @@
 using Atv_Cap7WebAPI.Data.Context;
 using Atv_Cap7WebAPI.Models;
 using Atv_Cap7WebAPI.Repository.Repositories;
+using Atv_Cap7WebAPI.Models.DTOs;
 
 namespace Atv_Cap7WebAPI.Repository
 {
@@ -33,8 +34,17 @@ namespace Atv_Cap7WebAPI.Repository
                 .FirstOrDefaultAsync(v => v.Id == id);
         }
 
-        public async Task AdicionarAsync(Vaga vaga)
+        public async Task AdicionarAsync(VagaCreateDTO vagaDTO)
         {
+            Vaga vaga = new()
+            {
+                Id = vagaDTO.Id,
+                Titulo = vagaDTO.Titulo,
+                Descricao = vagaDTO.Descricao,
+                Local = vagaDTO.Local,
+                Aberta = vagaDTO.Aberta,
+                EmpresaId = vagaDTO.EmpresaId
+            };
             _context.Vagas.Add(vaga);
             await _context.SaveChangesAsync();
         }
@@ -55,9 +65,14 @@ namespace Atv_Cap7WebAPI.Repository
             }
         }
 
-        public async Task<int> ContarTotalAsync()
+        public async Task<int> ContarTotalAsync(int id)
         {
-            return await _context.Vagas.CountAsync();
+            Vaga vaga = await _context.Vagas.Include(v => v.Inscricoes).FirstOrDefaultAsync(v => v.Id == id);
+
+            if (vaga == null) return 0;
+            if (vaga.Inscricoes == null) return 0;
+
+            return vaga.Inscricoes.Count;
         }
     }
 }

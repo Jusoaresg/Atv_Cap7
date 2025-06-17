@@ -2,6 +2,7 @@
 using Atv_Cap7WebAPI.Data.Context;
 using Atv_Cap7WebAPI.Models;
 using Atv_Cap7WebAPI.Repository.Repositories;
+using Atv_Cap7WebAPI.Models.DTOs;
 
 namespace Atv_Cap7WebAPI.Repository
 {
@@ -21,8 +22,17 @@ namespace Atv_Cap7WebAPI.Repository
                 .FirstOrDefaultAsync(a => a.CandidatoId == candidatoId);
         }
 
-        public async Task AdicionarOuAtualizarAsync(Avaliacao avaliacao)
+        public async Task AdicionarOuAtualizarAsync(AvaliacaoCreateDTO avaliacaoDTO)
         {
+            Avaliacao avaliacao = new()
+            {
+                CandidatoId = avaliacaoDTO.CandidatoId,
+                NotaTecnica = avaliacaoDTO.NotaTecnica,
+                NotaComportamental = avaliacaoDTO.NotaComportamental,
+                Comentario = avaliacaoDTO.Comentario,
+                DataAvaliacao = avaliacaoDTO.DataAvaliacao
+            };
+
             var existente = await BuscarPorCandidatoIdAsync(avaliacao.CandidatoId);
             if (existente == null)
                 _context.Avaliacoes.Add(avaliacao);

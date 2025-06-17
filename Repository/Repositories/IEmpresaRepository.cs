@@ -1,4 +1,5 @@
 ﻿using Atv_Cap7WebAPI.Models;
+using Atv_Cap7WebAPI.Models.DTOs;
 
 namespace Atv_Cap7WebAPI.Repository.Repositories
 {
@@ -6,7 +7,7 @@ namespace Atv_Cap7WebAPI.Repository.Repositories
     {
         Task<IEnumerable<Empresa>> ListarTodasAsync();
         Task<Empresa?> BuscarPorIdAsync(int id);
-        Task AdicionarAsync(Empresa empresa);
+        Task AdicionarAsync(EmpresaCreateDTO empresa);
         Task AtualizarAsync(Empresa empresa);
         Task RemoverAsync(int id);
     }

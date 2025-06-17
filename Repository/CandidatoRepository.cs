@@ -2,6 +2,7 @@
 using Atv_Cap7WebAPI.Data.Context;
 using Atv_Cap7WebAPI.Models;
 using Atv_Cap7WebAPI.Repository.Repositories;
+using Atv_Cap7WebAPI.Models.DTOs;
 
 namespace Atv_Cap7WebAPI.Repository
 {
@@ -30,8 +31,14 @@ namespace Atv_Cap7WebAPI.Repository
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 
-        public async Task AdicionarAsync(Candidato candidato)
+        public async Task AdicionarAsync(CandidatoCreateDTO candidatoDto)
         {
+            Candidato candidato = new()
+            {
+                Id = candidatoDto.Id,
+                Nome = candidatoDto.Nome,
+                Email = candidatoDto.Email,
+            };
             _context.Candidatos.Add(candidato);
             await _context.SaveChangesAsync();
         }

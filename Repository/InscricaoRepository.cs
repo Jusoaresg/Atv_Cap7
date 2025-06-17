@@ -30,8 +30,17 @@ namespace Atv_Cap7WebAPI.Repository
                 .FirstOrDefaultAsync(i => i.Id == id);
         }
 
-        public async Task AdicionarAsync(Inscricao inscricao)
+        public async Task AdicionarAsync(InscricaoCreateDTO inscricaoDTO)
         {
+            Inscricao inscricao = new()
+            {
+                Id = inscricaoDTO.Id,
+                DataInscricao = inscricaoDTO.DataInscricao,
+                CandidatoId = inscricaoDTO.CandidatoId,
+                VagaId = inscricaoDTO.VagaId,
+                Status = inscricaoDTO.Status
+            };
+
             _context.Inscricoes.Add(inscricao);
             await _context.SaveChangesAsync();
         }
