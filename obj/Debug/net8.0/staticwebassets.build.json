@@ -1,1 +1,11 @@
-{"Version":1,"Hash":"af70m8zfHKtIRSIkxg/j/MbQrc8uFcB5mdiyt1WTers=","Source":"Atv_Cap7WebAPI","BasePath":"_content/Atv_Cap7WebAPI","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "MEK+x74xfFazfUecmVkPRZtWBtj6wu3HUZIvv+Ox3o0=",
+  "Source": "Atv_Cap7WebAPI",
+  "BasePath": "_content/Atv_Cap7WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

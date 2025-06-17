@@ -53,9 +53,9 @@ namespace Atv_Cap7WebAPI.Repository
             }
         }
 
-        public async Task<IEnumerable<Empresa>> GetEmpresasAsync(PaginationParameters pagination)
+        public async Task<IEnumerable<ProgramaDiversidade>> GetProgramasAsync(PaginationParameters pagination)
         {
-            return await _context.Empresas
+            return await _context.ProgramasDiversidade
                 .Skip((pagination.PageNumber - 1) * pagination.PageSize)
                 .Take(pagination.PageSize)
                 .ToListAsync();

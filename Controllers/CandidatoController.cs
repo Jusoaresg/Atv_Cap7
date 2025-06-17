@@ -1,13 +1,11 @@
 namespace Atv_Cap7WebAPI.Controllers;
 
-using Atv_Cap7WebAPI.Helpers;
-using Atv_Cap7WebAPI.Models;
-using Atv_Cap7WebAPI.Repository;
-using Atv_Cap7WebAPI.Repository.Repositories;
-using Atv_Cap7WebAPI.Models.DTOs;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using global::Atv_Cap7WebAPI.Models.DTOs;
+using global::Atv_Cap7WebAPI.Models;
+using global::Atv_Cap7WebAPI.Repository.Repositories;
+using global::Atv_Cap7WebAPI.Helpers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -20,7 +18,7 @@ public class CandidatoController : ControllerBase
         _candidatoRepository = candidatoRepository;
     }
 
-    [HttpGet]
+    [HttpGet("paginated")]
     public async Task<IActionResult> GetCandidatos([FromQuery] PaginationParameters paginationParams)
     {
         var candidatos = await _candidatoRepository.GetCandidatosAsync(paginationParams);

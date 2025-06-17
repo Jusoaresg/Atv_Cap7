@@ -2,11 +2,8 @@
 using Atv_Cap7WebAPI.Data.Context;
 using Atv_Cap7WebAPI.Models;
 using Atv_Cap7WebAPI.Repository.Repositories;
-<<<<<<< HEAD
 using Atv_Cap7WebAPI.Models.DTOs;
-=======
 using Atv_Cap7WebAPI.Helpers;
->>>>>>> 6779efc27d30e93ff56141f8cc4bace050181440
 
 namespace Atv_Cap7WebAPI.Repository
 {
